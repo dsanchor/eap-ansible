@@ -17,8 +17,8 @@ In order to run this playbook you need a remote user with ssh passwordless acces
 #### Configuration
 
 This playbook has two main configuration files:
-1. vars/identity.yml [vars/identity.yml](vars/identity.yml): redhat_user and redhat_password variables for subscribing the system using Red Hat manager. If encryption for this file is needed (recommended), see http://docs.ansible.com/ansible/playbooks_vault.html
-2. vars/main.yml [vars/main.yml](vars/main.yml): optional variables for selecting different installation modes. Ex: eap_operating_mode=[standalone|domain]
+1. [vars/identity.yml](vars/identity.yml): redhat_user and redhat_password variables for subscribing the system using Red Hat manager. If encryption for this file is needed (recommended), see http://docs.ansible.com/ansible/playbooks_vault.html
+2. [vars/main.yml](vars/main.yml): optional variables for selecting different installation modes. Ex: eap_operating_mode=[standalone|domain]
 
 #### Examples
 
@@ -32,7 +32,7 @@ To run a simple installation providing an inventory file using defaults:
 
 To run a simple installation over one server using defaults:
 
-`ansible-playbook playbook.yml -i 172.28.128.3,` Note: Last comma do the trick. If missing, -i value provided will be consider as a path to an inventory file
+`ansible-playbook playbook.yml -i 172.28.128.3,` Note: Last comma do the trick. If missing, -i provided value will be consider as a path to an inventory file
 
 To run the playbook using a different user that root
 
