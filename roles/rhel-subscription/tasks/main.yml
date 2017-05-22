@@ -1,0 +1,4 @@
+---
+# tasks file for rhel-subscription
+- name: Register to RHEL and Auto-Consume Subscription(s)
+  redhat_subscription: state=present username={{ redhat_username }} password={{ redhat_password }} autosubscribe=true force_register=true

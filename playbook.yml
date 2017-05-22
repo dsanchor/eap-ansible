@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars_files:
+# TODO encrypt file vars/identity.yml
+    - vars/identity.yml
+    - vars/main.yml
+  roles:
+    - { role: rhel-subscription, redhat_username: '{{ redhat_user }}', redhat_password: '{{ redhat_pass }}' }
+    - { role: java }
+    - { role: eap }

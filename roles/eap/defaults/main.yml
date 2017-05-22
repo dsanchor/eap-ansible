@@ -1,0 +1,5 @@
+---
+eap_rpm_repository: jb-eap-7-for-rhel-7-server-rpms
+eap_package: jboss-eap7
+eap_service_name_prefix: eap7-
+eap_operating_mode: standalone
